@@ -116,7 +116,7 @@ firstLetterOfFirstName = firstName[0] This is just basically a way to get the fi
 
 STRING IMMUTABILITY: It implies that a string cannot be altered once created which means you can't change the string literals individually. But it doesn't mean the string can't be changed
 var myStr = "Jello world";
-myStr[0] = "H"; This won't work because you can alter the string literal.
+myStr[0] = "H"; This won't work because you can't alter the string literal.
 myStr = "Hello world"; This is the way to fix the problem, you have just replaced the other string with a new one by assigning it to the variable of the old string.
 
 BRACKET NOTATION TO FIND NTH CHARACTER IN STRING
@@ -147,12 +147,12 @@ var ourArray = ["John", 23];
 NESTED ARRAYS: When one of the elements in an array is another it's called a nested array or a multidimensional array.
 var myArray = [["Alvin", 20],["temi",21]];
 
-ACCESSING ARRAY DATA WITH INDEXED
+ACCESSING ARRAY DATA WITH INDEXES
 ourArray = [50,60,70];
 ourData = ourArray[0];
 console.log(ourData);
 
-MODIFY ARRY DATA WITH INDEXES 
+MODIFY ARRAY DATA WITH INDEXES 
 let ourArray = [16,17,19];
 ourArray[1] = 20;
 console.log(ourArray);
@@ -207,14 +207,56 @@ GLOBAL SCOPE AND FUNCTIONS
 Scopes refers to the visiblity of variables, variables which are defined outside of a function block have global scope. Global scope means they can be seen everywhere in your Javascript code.
 
 LOCAL SCOPE AND FUNCTIONS: Variables declared within a function as well as the function parameters have local scope. That means they are only visible from within the function
+
+GLOBAL SCOPE VS LOCAL SCOPE
+
+var outerWear = "T-shirt";
+function myOutfit(){
+    var outerWear = "sweater";
+    return outerWear;
+}
+console.log(myOutfit());//Here the local scope takes precidence over the global scope because i logged the function. Since i called the function in the log it will output the variable declared in the function
+console.log(outerWear);//Here it will log the variable declared outside the function because it is a global scope. 
+
+RETURN A VALUE FROM A FUNCTION WITH RETURN
+function minusSeven(num){
+    return num - 7;
+}
+console.log(minusSeven(10));//Using the concept of passing values to functions with arguments, "num" is the argument and then you use the return keyword to subtract 7 from the argument
+
+UNDERSTANDING UNDEFINED VALUE RETURNED FROM A FUNCTION
+var sum = 0;
+function addThree(){
+    sum += 3;
+}
+console.log(addThree())//This is going to be undefined because you are not returning anything
+
+ASSIGNMENT WITH A RETURNED VALUE
+let changed = 0 //Initializing the variable
+function change(num){
+    return(num + 5) / 3
+}
+
+changed = change(10)// Assigning the returned value to the already initialiazed variable
+
+STAND IN LINE
+In computer science, a "Cue" is an abstract data structure where items are kept in order. New items can be added to the back of the cue and old items are taken off from the front of the cue 
+function nextInLine(arr, item){
+    arr.push(item);
+    return arr.shift();
+}
+
+let testArr = [1,2,3,4,5];
+
+console.log("Before: " + JSON.stringify(testArr));//JSON.stringify just basically converts the array into a string format
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
+
+BOOLEAN VALUES: They are data types that return true or false values
+
+USE CONDITIONAL LOGIC WITH IF STATEMENTS
+An If statement is used to make decisions in code
 */
-
-
-
-
-
-
-
 
 
 
