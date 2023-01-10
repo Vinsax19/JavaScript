@@ -256,7 +256,7 @@ BOOLEAN VALUES: They are data types that return true or false values
 
 USE CONDITIONAL LOGIC WITH IF STATEMENTS
 An If statement is used to make decisions in code. The keyword "If" tells Javascript to execute the code in the curly braces under certain conditions defined in the parenthesis
-*/
+
 function trueOrFalse(isItTrue){
     if (isItTrue) {
         return "Yes, it is true";
@@ -265,12 +265,94 @@ function trueOrFalse(isItTrue){
 }
 console.log(trueOrFalse(false));
 
+COMPARSION WITH THE EQUALITY OPERATOR
+function testEqual(val){
+    if (val == 12){// recall "==" is a comparsion operator while "=" is an assignment operator
+        return "Equal";
+    }// if the conditions here are met then it equls a true value, the code block would run else it will output the code block below it.
+    return "Not Equal";
+}
+
+console.log(testEqual(10));
+
+COMPARSION WITH THE STRICTLY EQUALITY OPERATOR
+function testStrict(val){
+    if(val === 7){ // The "===" operator checks for data type and value, unlike the equality operator that checks for only value and performs a type conversion. Strict equality does not perform type conversion
+        return "Equal"
+    }
+    return "Not equal";
+}
+
+console.log(testStrict(10));
+
+COMPARSION WITH THE INEQUALITY OPERATOR
+function testNotEqual(value){
+    if(value != 70){
+        return "not equal";
+    }
+    return "equal";
+}
+console.log(testNotEqual(7));
+
+COMPARSION WITH THE STRICTLY INEQUALITY OPERATOR
+function testStrictNotEqual(value){
+    if(value !== 17){
+        return "not equal"
+    }
+    return "equal"
+}
+console.log(testStrictNotEqual("17"));
+
+COMPARSIONS WITH THE LOGICAL AND OPERATOR
+function testGreaterThan(val){
+    if(val > 100){
+        return "Over 100";
+    }
+
+    if(val > 10){
+        return "Over 10"
+    }
+
+    return "10 or under"
+}
+
+console.log(testGreaterThan(50));
+
+COMPARSIONS WITH THE GREATER THAN OR EQUAL TO OPERATOR
+function testGreaterThanOrEqual (val){
+    if (val >= 20){
+        return "20 or Over"
+    }
+    if (val >= 10){
+        return "10 or Over"
+    }
+    return "Less than 10"
+}
+console.log(testGreaterThanOrEqual(5));
+
+COMPARSION WITH THE LESS THAN OPERATOR
+function testLessThan(val){
+    if (val < 20){
+        return "Less than 20"
+    }
+}
+console.log(testLessThan(5));
 
 
+COMPARSION WITH THE LESS THAN OR EQUAL OPERATOR
+function testLessThanOrEqual (val){
+    if (val <= 20){
+        return "20 or Less"
+    }
+}
+console.log(testLessThanOrEqual(5));
 
-
-
-
-
+*/
+function testLessThan(val){
+    if (val < 20){
+        return "Less than 20"
+    }
+}
+console.log(testLessThan(5));
 
 
