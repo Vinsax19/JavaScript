@@ -255,8 +255,15 @@ console.log("After: " + JSON.stringify(testArr));
 BOOLEAN VALUES: They are data types that return true or false values
 
 USE CONDITIONAL LOGIC WITH IF STATEMENTS
-An If statement is used to make decisions in code
+An If statement is used to make decisions in code. The keyword "If" tells Javascript to execute the code in the curly braces under certain conditions defined in the parenthesis
 */
+function trueOrFalse(isItTrue){
+    if (isItTrue) {
+        return "Yes, it is true";
+    }
+   return "No, it is false"
+}
+console.log(trueOrFalse(false));
 
 
 
