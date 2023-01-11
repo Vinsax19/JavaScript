@@ -348,12 +348,48 @@ function testLessThanOrEqual (val){
 console.log(testLessThanOrEqual(5));
 
 COMPARISON WITH THE LOGICAL AND OPERATOR
+function testLogicalAnd(val){
+    if (val <= 50 && val >=25){
+        return "yes";
+    }
+    return "no";
+}
+console.log(testLogicalAnd(5));
+
+COMPARISON WITH THE LOGICAL OR OPERATOR
+function testLogicalOr(val){
+    if (val < 10 || val > 20){
+        return "Outside";
+    }
+    return "Inside";
+}
+console.log(testLogicalOr(5));
+
+ELSE STATEMENTS
+function testElse(val){
+    let result = ""
+    if (val > 5){
+        result ="Bigger than 5";
+    }
+    else {result ="5 or smaller";
+    }
+    return result
+}
+console.log(testElse(5));
+
+ELSE IF STATEMENTS
 */
-function testLessThan(val){
-    if (val < 20){
-        return "Less than 20"
+function testElseIf(val){
+    if (val > 10){
+        return "Greater than 10";
+    }
+    else if(val < 5) {
+        return "smaller than 5";
+    }
+    else{
+         return "Between 5 and 10"
     }
 }
-console.log(testLessThan(5));
+console.log(testElseIf(5));
 
 
