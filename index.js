@@ -446,6 +446,7 @@ function caseInSwitch(val){
 }
 console.log(caseInSwitch(2));
 
+DEFAULT OPTION IN SWITCH STATEMENTS
 */
 function caseInSwitch(val){
     var answer = ""
@@ -461,6 +462,9 @@ function caseInSwitch(val){
             break;
         case 4:
             answer = "delta";
+            break;
+        default://This is what will be outputed when something entirely different from these above cases are passed in
+            answer = "stuff";
             break;
     }
     return answer;
