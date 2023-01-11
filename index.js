@@ -378,7 +378,6 @@ function testElse(val){
 console.log(testElse(5));
 
 ELSE IF STATEMENTS
-*/
 function testElseIf(val){
     if (val > 10){
         return "Greater than 10";
@@ -391,5 +390,59 @@ function testElseIf(val){
     }
 }
 console.log(testElseIf(5));
+
+LOGICAL ORDER IN IF ELSE STATEMENTS
+function orderMyLogic(val){
+    if (val < 5){
+        return "Less than 5";
+    }
+    else if(val < 10) {
+        return "Less than 10";
+    }
+    else{
+         return "Greater than or equals to 10";
+    }
+}
+console.log(torderMyLogic(5));//it's just basically order the logic in the right way to error or incorrect output
+
+CHAINING IF ELSE STATEMENTS
+function testSize(num){
+    if (num < 5){
+        return "Tiny";
+    }
+    else if(num < 10) {
+        return "Small";
+    }
+    else if(num < 15) {
+        return "Medium";
+    }
+    else if(num < 20) {
+        return "Large";
+    }
+    else{
+         return "Huge";
+    }
+}
+console.log(testSize(5));
+
+*/
+function testSize(num){
+    if (num < 5){
+        return "Tiny";
+    }
+    else if(num < 10) {
+        return "Small";
+    }
+    else if(num < 15) {
+        return "Medium";
+    }
+    else if(num < 20) {
+        return "Large";
+    }
+    else{
+         return "Huge";
+    }
+}
+console.log(testSize(5));
 
 
