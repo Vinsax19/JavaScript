@@ -425,24 +425,46 @@ function testSize(num){
 }
 console.log(testSize(5));
 
-*/
-function testSize(num){
-    if (num < 5){
-        return "Tiny";
+SWITCH STATEMENTS 
+function caseInSwitch(val){
+    var answer = ""
+    switch(val){
+        case 1:
+            answer = "alpha";
+            break;
+        case 2:
+            answer = "beta";
+            break;
+        case 3:
+            answer = "gamma";
+            break;
+        case 4:
+            answer = "delta";
+            break;
     }
-    else if(num < 10) {
-        return "Small";
-    }
-    else if(num < 15) {
-        return "Medium";
-    }
-    else if(num < 20) {
-        return "Large";
-    }
-    else{
-         return "Huge";
-    }
+    return answer;
 }
-console.log(testSize(5));
+console.log(caseInSwitch(2));
+
+*/
+function caseInSwitch(val){
+    var answer = ""
+    switch(val){
+        case 1:
+            answer = "alpha";
+            break;
+        case 2:
+            answer = "beta";
+            break;
+        case 3:
+            answer = "gamma";
+            break;
+        case 4:
+            answer = "delta";
+            break;
+    }
+    return answer;
+}
+console.log(caseInSwitch(2));
 
 
