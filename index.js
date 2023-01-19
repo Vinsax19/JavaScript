@@ -447,7 +447,6 @@ function caseInSwitch(val){
 console.log(caseInSwitch(2));
 
 DEFAULT OPTION IN SWITCH STATEMENTS
-*/
 function caseInSwitch(val){
     var answer = ""
     switch(val){
@@ -470,5 +469,98 @@ function caseInSwitch(val){
     return answer;
 }
 console.log(caseInSwitch(2));
+
+MULTIPLE IDENTICAL OPTIONS IN SWITCH STATEMENTS
+function caseInSwitch(val){
+    var answer = ""
+    switch(val){
+        case 1:
+        case 2:
+        case 3:
+            answer = "Low";
+            break;
+        case 4:
+        case 5:
+        case 6:
+            answer = "Mid";
+            break;
+        case 4:
+        case 5:
+        case 6:
+            answer = "High";
+            break;
+    }
+    return answer;
+}
+console.log(caseInSwitch(8));
+REPLACING IF ELSE CHAINS WITH SWITCH
+function caseInSwitch(val){
+    var answer = ""
+    switch(val){
+        case "bob":
+            answer = "Marley";
+            break;
+        case 42:
+            answer = "The Answer";
+            break;
+        case 1:
+            answer = "There is no #1";
+            break;
+        case 99:
+            answer = "Missed by this much";
+            break;
+        case 7:
+            answer = "Ate Nine";
+            break;
+    }
+    return answer;
+}
+console.log(caseInSwitch(8));
+
+RETURNING BOOLEAN VALUES FROM FUNCTIONS
+function isLess(a, b){
+    
+    return a < b;
+}
+console.log(isLess(9,3));
+
+RETURNING EARLY PATTERN FROM FUNCTIONS
+function abTest(a, b){
+    if(a < 0 || b < 0){
+        return undefined;// This allows the code to return early if the conditions in the if statements are true
+    }
+    return a < b;
+}
+console.log(abTest(0 , 0));
+
+COUNTING CARDS GAME
+*/
+count = 0 
+function cc(card){
+    
+    switch(card){
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            count++;
+            break;
+        case 10:
+        case "J":
+        case "Q":
+        case "K":
+        case "A":
+            count--;
+            break;
+
+    }
+    let holdbet = "Hold"
+    if(count > 0){
+        /* holdbet = */
+    }
+    return count + " " + holdbet;
+}
+console.log(abTest(0 , 0));
 
 
