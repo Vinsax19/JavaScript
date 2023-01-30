@@ -534,7 +534,6 @@ function abTest(a, b){
 console.log(abTest(0 , 0));
 
 COUNTING CARDS GAME
-*/
 count = 0 
 function cc(card){
     
@@ -557,10 +556,45 @@ function cc(card){
     }
     let holdbet = "Hold"
     if(count > 0){
-        /* holdbet = */
+      holdbet = 'Bet'
     }
     return count + " " + holdbet;
 }
-console.log(abTest(0 , 0));
 
+cc(2); cc('K'); cc(7); cc('K'); cc('A');
+console.log(cc(4));
 
+BUILD JAVASCRIPT OBJECTS
+var ourDog = {
+    "name": "Camper", /* The texts before the colon are called "Properties" while the ones after the colon are called "values" 
+    "legs": 4,
+    "tails": 1,
+    "friends": ["everything!"]
+};
+
+ACCESSING OBJECT PROPERTIES WITH DOT NOTATION
+var testObj = {
+    "hat": "ballcap", 
+    "shirt": "jersey",
+    "shoes": "cleats",
+};
+
+var hatValue = testObj.hat;
+var shirtValue = testObj.shirt;
+console.log(hatValue, shirtValue);
+
+ACCESSING OBJECT PROPERTIES WITH BRACKET NOTATION: It
+
+*/
+
+var testObj = {
+    "hat": "ballcap", 
+    "shirt": "jersey",
+    "shoes": "cleats",
+};
+
+var hatValue = testObj.hat;
+var shirtValue = testObj.shirt;
+console.log(hatValue, shirtValue);
+
+myStr = "Alvin the saxophone, "
