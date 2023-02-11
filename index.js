@@ -584,17 +584,80 @@ var shirtValue = testObj.shirt;
 console.log(hatValue, shirtValue);
 
 ACCESSING OBJECT PROPERTIES WITH BRACKET NOTATION: It
+var testObj = {
+    "an entree": "hamburger", 
+    "my side": "veggies",
+    "the drink": "water",
+};
+
+var entreeValue = testObj["an entree"];
+var shirtValue = testObj['the drink'];
+console.log(entreeValue, shirtValue);
+
+ACCESSING OBJECT PROPERTIES WITH VARIABLES(BRACKET NOTATION): Braccket notation can also be used to look up properties using variables
+var testObj = {
+    12: "Namath", 
+    16: "Montana",
+    19: "Unitas"
+};
+
+var playerNumber = 16;
+var player = testObj[playerNumber];
+console.log(player);
+
+UPDATING OBJECT PROPERTY
+var myDog = {
+    'name': 'Coder',
+    'legs': 4,
+    'tails': 1,
+    'friends': ['freeCodeCamp Campers']
+};
+
+myDog.name = 'Happy Coder'
+console.log(myDog);
+
+ADDING PROPERTIES TO OBJECT (WITH BOTH DOT AND BRACKET NOTATION)
+var myDog = { 
+    'name': 'Coder',
+    'legs': 4,
+    'tails': 1,
+    'friends': ['freeCodeCamp Campers']
+};
+
+myDog.bark = 'bow-wow'
+
+var myDog = { 
+    'name': 'Coder',
+    'legs': 4,
+    'tails': 1,
+    'friends': ['freeCodeCamp Campers']
+};
+
+myDog['bark'] = 'woof!'
+console.log(myDog);
 
 */
 
-var testObj = {
-    "hat": "ballcap", 
-    "shirt": "jersey",
-    "shoes": "cleats",
+var myDog = { 
+    'name': 'Coder',
+    'legs': 4,
+    'tails': 1,
+    'friends': ['freeCodeCamp Campers']
 };
 
-var hatValue = testObj.hat;
-var shirtValue = testObj.shirt;
-console.log(hatValue, shirtValue);
+myDog.bark = 'bow-wow'
 
-myStr = "Alvin the saxophone, "
+var myDog = { 
+    'name': 'Coder',
+    'legs': 4,
+    'tails': 1,
+    'friends': ['freeCodeCamp Campers']
+};
+
+myDog['bark'] = 'woof!'
+console.log(myDog);
+
+
+
+
+
