@@ -636,28 +636,52 @@ var myDog = {
 myDog['bark'] = 'woof!'
 console.log(myDog);
 
+DELETE PROPERTIES FROM OBJECTS
+ar myDog = { 
+    'name': 'Coder',
+    'legs': 4,
+    'tails': 1,
+    'friends': ['freeCodeCamp Campers'],
+    'bark': 'bow-wow'
+};
+
+delete myDog.bark
+
+USING OBJECTS FOR LOOKUPS
+function phoneticlookup(val) {
+    var result = '';
+
+    var lookup = { 
+        'alpha': 'Adams',
+        'bravo': 'Boston',
+        'charkie': 'Chicago',
+        'delta': 'Denver',
+        'echo': 'Easy',
+        'foxtrot': 'frank'
+    };
+    
+    result = lookup[val];
+    return result;
+}
+ console.log(phoneticlookup('alpha'));
+
+TESTING OBJECTS FOR PROPERTIES
 */
 
-var myDog = { 
-    'name': 'Coder',
-    'legs': 4,
-    'tails': 1,
-    'friends': ['freeCodeCamp Campers']
+var myObj = {
+    gift: 'pony',
+    pet: 'kitten',
+    bed: 'sleigh'
 };
 
-myDog.bark = 'bow-wow'
+function checkObj(checkProp){
+    if (myObj.hasOwnProperty(checkProp)){
+        return myObj[checkProp];
+    } else{
+        return 'Not Found'
+    }
+}
 
-var myDog = { 
-    'name': 'Coder',
-    'legs': 4,
-    'tails': 1,
-    'friends': ['freeCodeCamp Campers']
-};
-
-myDog['bark'] = 'woof!'
-console.log(myDog);
-
-
-
+console.log(checkObj('bed'));
 
 
