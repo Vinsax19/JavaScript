@@ -666,8 +666,6 @@ function phoneticlookup(val) {
  console.log(phoneticlookup('alpha'));
 
 TESTING OBJECTS FOR PROPERTIES
-*/
-
 var myObj = {
     gift: 'pony',
     pet: 'kitten',
@@ -684,4 +682,210 @@ function checkObj(checkProp){
 
 console.log(checkObj('bed'));
 
+MANIPULATING COMPLEX OBJECTS
+var myMusic = [
+    {
+        'artist': 'Billy Joel',
+        'title': 'Piano Man',
+        'release_year': 1973,
+        'formats':[
+            'CD',
+            '8T',
+            'LP'
+        ],
+        'gold': true
+    },
 
+    {
+        'artist': 'Beau Carnes',
+        'title': 'Cereal Man',
+        'release_year': 2003,
+        'formats': [
+            'Youtube video'
+        ]
+    }
+];
+
+ACCESSING NESTED OBJECTS
+
+var myStorage = {
+    'car': {
+        'inside': {
+            'glove box': 'maps',
+            'passenger seat': 'crumbs'
+        },
+        'outside': {
+            'trunk': 'jack'
+        }
+    }
+};
+
+var gloveBoxContents = myStorage.car.inside['glove box']; // Accessing the 'glove box' property with the dot and bracket notation
+console.log(gloveBoxContents);
+
+ACCESSING NESTED ARRAYS
+var myPlants = [
+    {
+        type: 'flowers',
+        list: [
+            'rose',
+            'tulip',
+            'dandelion'
+        ]
+    },
+    {
+        type: 'trees',
+        list: [
+            'fir',
+            'pine',
+            'birch'
+        ]
+    }
+];
+
+var secondTree = myPlants[1].list[1];
+console.log(secondTree);
+
+ITERATE WITH WHILE LOOPS
+var myArray = [];
+
+var i = 0;
+while(i < 5){
+    myArray.push(i);
+    i++;
+}
+
+console.log(myArray);
+
+ITERATE WITH FOR LOOPS
+var myArray = [];
+
+for(var i = 0; i < 5; i++){
+    myArray.push(i);
+}
+
+console.log(myArray);
+
+
+RANDOM NAME PICKING CODE
+const myArray = ['Segun', 'Nife', 'Deji'];
+const randomElement = myArray[Math.floor(Math.random() * myArray.length)];
+console.log(randomElement);// A code that randomly picks from a given set of array
+
+ITERATE ODD NUMBERS WITH FOR LOOP
+var myArray = [];
+
+for(var i = 1; i < 10; i+=2){
+    myArray.push(i);
+}// for odd numbers from 1 to 10, the only difference is the starting point. Which in this case is 1
+
+console.log(myArray);
+
+
+ITERATING EVEN NUMBERS WITH FOR LOOP
+var myArray = [];
+
+for(var i = 0; i < 10; i+=2){
+    myArray.push(i);
+}// for even numbers from 1 to 10
+
+console.log(myArray);
+
+COUNTING BACKWARDS WITH A FOR LOOP
+var ourArray = [];
+
+for(var i = 10; i > 0; i--){
+    ourArray.push(i);
+}
+console.log(ourArray);
+
+ITERATING THROUGH AN ARRAY WITH A FOR LOOP
+
+var myArr = [5,7,8,9];
+var total = 0
+
+for(var i = 0; i < myArr.length; i++){
+    total += myArr[i]
+}
+
+console.log(total);
+
+NESTING FOR LOOPS
+function multiplyAll(arr){
+    var product = 1;
+    
+    for (let i = 0; i < arr.length; i++) {
+         for (let j = 0; j < arr[i].length; j++) {
+            product *= arr[i][j];
+            
+         }
+        
+    }
+    return product
+}
+
+var product = multiplyAll([[1,2],[3,4],[5,6,7]]);
+console.log(product);
+
+ITERATING WITH A DO-WHILE LOOP
+
+var myArray = [];
+var i = 10;
+
+
+do{
+    myArray.push(i);
+    i++;
+} while(i < 5)//The difference between a while loop and a do-while loop is that the do-while loop would run at least once before checking the conditions.
+
+console.log(i, myArray);
+
+PROFILE LOOKUP
+var contacts = [
+    {
+        'firstName': 'Segun',
+        'lastName': 'Oshin',
+        'number': '012345678',
+        'likes': ['sleep', 'food']
+    },
+    {
+        'firstName': 'Deji',
+        'lastName': 'Agbelu',
+        'number': '021345678',
+        'likes': ['gaming', 'food']
+    },
+    {
+        'firstName': 'Alvin',
+        'lastName': 'Onichabor',
+        'number': '08123670775',
+        'likes': ['gaming', 'food', 'coding', 'Saxophone']
+    }
+
+]
+
+function lookUpProfile(name, prop){
+    for (var i = 0; i < contacts.length; i++){
+        if(contacts[i].firstName === name){
+            return contacts[i][prop] || 'No such property'
+        }
+    }
+}
+
+var data = lookUpProfile('Alvin','likes');
+console.log(data);
+
+GENERATING RANDOM FRACTIONS
+function randomFraction(){
+    return Math.random();//This function generates any random number between 0 and 1, but can't be 1
+}
+
+console.log(randomFraction());
+
+GENERATING RANDOM WHOLE NUMBERS
+*/
+
+function randomWholeNum(){
+    return Math.floor(Math.random() * 10);//This function generates a random whole number from 0 to 9, it is able to generate a whole number because of the 'Math.floor' function which rounds up a number to it's nearest whole number
+}
+
+console.log(randomWholeNum());
