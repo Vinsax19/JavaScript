@@ -882,10 +882,19 @@ function randomFraction(){
 console.log(randomFraction());
 
 GENERATING RANDOM WHOLE NUMBERS
-*/
 
 function randomWholeNum(){
     return Math.floor(Math.random() * 10);//This function generates a random whole number from 0 to 9, it is able to generate a whole number because of the 'Math.floor' function which rounds up a number to it's nearest whole number
 }
 
 console.log(randomWholeNum());
+
+GENERATING A RANDOM WHOLE NUMBER WITHIN A RANGE
+*/
+
+function randomNumber(min, max){
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+
+}
+
+console.log(randomNumber(10,20));//The 'RandomNumber' function takes in two arguments, 'min' and 'max', which represent the range of numbers you want to generate a random whole number from. 'The Math.random()' function generates a random decimal number between 0 and 1, and multiplying it by '(max - min + 1)' gives us a random decimal number within the range of 0 to 'max - min + 1'. Adding min to this value shifts the range to be from min to max, and finally, the 'Math.floor()' function rounds the decimal number down to the nearest whole number.
