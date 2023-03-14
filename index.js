@@ -959,4 +959,4 @@ function freezeObj(){
     return MATH_CONSTANSTS.PI
 }
 
-const PI = freezeObj()
+const PI = freezeObj( )
