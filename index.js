@@ -6,8 +6,8 @@ Undefined, null, boolean, string, symbol, number and object
 
 // A variable is a way to store and manipulate data
 /* Ways of declaring variables are
-var myName = "Alvin" "var is a way to declare a variable that is going to be used through out your program, it can be changed later....."
-let ourName = "Vin music" "let will only be used within the scope in which it is declared "
+var myName = "Alvin"; "var is a way to declare a variable that is going to be used through out your program, it can be changed later....."
+let ourName = "Vin music"; "let will only be used within the scope in which it is declared "
 const pi = 3.14  "const is a variable that should never change or it can't be changed"
 
 
@@ -890,11 +890,73 @@ function randomWholeNum(){
 console.log(randomWholeNum());
 
 GENERATING A RANDOM WHOLE NUMBER WITHIN A RANGE
-*/
-
 function randomNumber(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
 
 }
 
-console.log(randomNumber(10,20));//The 'RandomNumber' function takes in two arguments, 'min' and 'max', which represent the range of numbers you want to generate a random whole number from. 'The Math.random()' function generates a random decimal number between 0 and 1, and multiplying it by '(max - min + 1)' gives us a random decimal number within the range of 0 to 'max - min + 1'. Adding min to this value shifts the range to be from min to max, and finally, the 'Math.floor()' function rounds the decimal number down to the nearest whole number.
+console.log(randomNumber(10,20));//The 'RandomNumber' function takes in two arguments, 'min' and 'max', which represent the range of numbers you want to generate a random whole number from. 'The Math.random()' function generates a random decimal number between 0 and 1, and multiplying it by '(max - min + 1)' gives us a random decimal number within the range of 0 to 'max - min + 1'. Adding min to this value shifts the range to be from min to max, and finally, the 'Math.floor()' function rounds the decimal number down to the nearest whole number. 
+
+USING THE "parseInt()" FUNCTION
+function convertToInteger(str){
+    return parseInt(str);
+}
+
+console.log(convertToInteger('67'));
+//The parseInt() function in JavaScript is used to parse a string and convert it into an integer. It takes two arguments: the string to be parsed and an optional radix parameter that specifies the base of the number system being used (e.g. base 10 for decimal numbers, base 16 for hexadecimal numbers).
+
+USING THE 'parseInt()' FUNCTION WITH A RADIX
+
+function convertToInteger(str){
+    return parseInt(str, 2)
+}
+
+console.log(convertToInteger("100001"));//It convert this stringed integer from base 2 to base 10
+
+USING THE CONDITIONAL (TERNARY) OPERATOR: The ternary operator is a shorthand way of writing an if-else statement in JavaScript. It's a single line of code that evaluates a condition and returns one of two values, depending on whether the condition is true or false.
+let age = 18;
+let status = age >= 18 ? 'Adult' : 'Minor';
+
+console.log(status);
+
+USING MULTIPLE CONDITIONAL (TERNARY) OPERATORS
+function checkSign(num){
+    return num > 0 ? 'positive': num < 0 ? "negative": "zero"
+
+}
+
+console.log(checkSign(20));
+
+MUTATING AN ARRAY DECLARED WITH CONST 
+const s = [7, 7, 2]
+
+function editInPlace(){
+    "use strict";
+    s[0] = 2;
+    s[1] = 5;
+    s[2] = 7;
+}
+editInPlace()
+console.log(s);
+
+PREVENTING OBJECT MUTATION
+
+*/
+
+function freezeObj(){
+    "use strict";
+    const MATH_CONSTANSTS ={
+        PI: 3.14
+    };
+
+    Object.freeze(MATH_CONSTANSTS)//This function ensure th the  value of the variable specified remains unchanged.
+
+    try{
+        MATH_CONSTANSTS.PI = 99;
+    } catch(ex){
+        console.log(ex);
+    }
+    return MATH_CONSTANSTS.PI
+}
+
+const PI = freezeObj()
